@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'movie_service.dart';
+
 void main() {
   runApp(MyApp());
+  //TODO("To be removed when all models are tested")
+  loadMovie();
 }
 
 class MyApp extends StatelessWidget {
