@@ -4,12 +4,12 @@ import 'package:movie_star/core/usecases/use_case.dart';
 import 'package:movie_star/features/movies/domain/entities/movies.dart';
 import 'package:movie_star/features/movies/domain/repositories/movie_repository.dart';
 
-class GetPopularMovies implements UseCase<Movies, NoParams> {
+class GetTopRatedMovies implements UseCase<Movies, NoParams> {
   final MovieRepository repository;
 
-  GetPopularMovies(this.repository);
+  GetTopRatedMovies(this.repository);
 
   Future<Either<Failure, Movies>> call(NoParams params) async {
-    return await repository.getPopularMovies();
+    return await repository.getTopRatedMovies();
   }
 }
