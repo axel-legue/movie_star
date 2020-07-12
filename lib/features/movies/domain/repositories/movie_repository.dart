@@ -19,7 +19,9 @@ abstract class MovieRepository {
   Future<Either<Failure, Movies>> getNowPlayingMovies(
       [int page, String region, String language]);
 
-  Future<Either<Failure, Response>> postRateMovie(int movieId, [String sessionId]);
-//  Future<Either<Failure,Movies>>deleteMovieRate(int movieId, [String sessionId]);
+  Future<Either<Failure, Response>> postRateMovie(int movieId,
+      [String sessionId]);
 
+  Future<Either<Failure, Response>> deleteMovieRate(int movieId,
+      [String sessionId]);
 }

@@ -1,20 +1,18 @@
 import 'package:dartz/dartz.dart';
-import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 import 'package:movie_star/core/entities/response.dart';
 import 'package:movie_star/core/error/failures.dart';
 import 'package:movie_star/core/usecases/use_case.dart';
 import 'package:movie_star/features/movies/domain/repositories/movie_repository.dart';
+import 'package:movie_star/features/movies/domain/usecases/post_rate_movie.dart';
 
-class PostRateMovie implements UseCase<Response, IntParams> {
+class DeleteRateMovie implements UseCase<Response, IntParams>{
   MovieRepository movieRepository;
 
-  PostRateMovie(this.movieRepository);
+  DeleteRateMovie(this.movieRepository);
 
   @override
   Future<Either<Failure, Response>> call(IntParams params) {
-    return movieRepository.postRateMovie(params.id);
+   return movieRepository.deleteMovieRate(params.id);
   }
+  
 }
-

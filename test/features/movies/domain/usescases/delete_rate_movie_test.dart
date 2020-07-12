@@ -3,29 +3,30 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:movie_star/core/entities/response.dart';
 import 'package:movie_star/core/usecases/use_case.dart';
+import 'package:movie_star/features/movies/domain/usecases/delete_rate_movie.dart';
 import 'package:movie_star/features/movies/domain/usecases/post_rate_movie.dart';
 
 import '../repository/mock_movie_repository.dart';
 
 void main() {
-  PostRateMovie rateMovie;
+  DeleteRateMovie deleteRateMovie;
   MockMovieRepository mockMovieRepository;
 
   setUp(() {
     mockMovieRepository = MockMovieRepository();
-    rateMovie = PostRateMovie(mockMovieRepository);
+    deleteRateMovie = DeleteRateMovie(mockMovieRepository);
   });
 
   final int tId = 1;
   final Response tResponse = Response(statusCode: 1, statusMessage: "ok");
   test(
-    'should post rate for a movie',
+    'should delete rate for a movie',
     () async {
       // arrange
-      when(mockMovieRepository.postRateMovie(any))
+      when(mockMovieRepository.deleteMovieRate(any))
           .thenAnswer((realInvocation) async => Right(tResponse));
       // act
-      final result = await rateMovie.call(IntParams(id: tId));
+      final result = await deleteRateMovie.call(IntParams(id: tId));
       // assert
       expect(result, Right(tResponse));
     },
