@@ -9,7 +9,7 @@ abstract class MovieRepository {
   Future<Either<Failure, Movies>> getTopRatedMovies(
       [int page, String region, String language]);
 
-  Future<Either<Failure, Movies>> getTopUpComingMovies(
+  Future<Either<Failure, Movies>> getUpComingMovies(
       [int page, String region, String language]);
 
   Future<Either<Failure, Movies>> getLatestMovies(
