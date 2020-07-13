@@ -1,51 +1,60 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'movie_details.dart';
+part of 'movie_details_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-MovieDetails _$MovieDetailsFromJson(Map<String, dynamic> json) {
-  return MovieDetails(
+MovieDetailsModel _$MovieDetailsModelFromJson(Map<String, dynamic> json) {
+  return MovieDetailsModel(
     adult: json['adult'] as bool,
     title: json['title'] as String,
     backdropPath: json['backdrop_path'] as String,
-    belongsToCollection: BelongsToCollection.fromJson(
-        json['belongs_to_collection'] as Map<String, dynamic>),
+    belongsToCollection: json['belongs_to_collection'] == null
+        ? null
+        : BelongsToCollectionModel.fromJson(
+            json['belongs_to_collection'] as Map<String, dynamic>),
     budget: json['budget'] as int,
     genreList: (json['genres'] as List)
-        .map((e) => Genre.fromJson(e as Map<String, dynamic>))
-        .toList(),
+        ?.map((e) =>
+            e == null ? null : GenreModel.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     homepage: json['homepage'] as String,
     id: json['id'] as int,
     imdbId: json['imdb_id'] as String,
     originalLanguage: json['original_language'] as String,
     originalTitle: json['original_title'] as String,
     overview: json['overview'] as String,
-    popularity: (json['popularity'] as num).toDouble(),
+    popularity: (json['popularity'] as num)?.toDouble(),
     posterPath: json['poster_path'] as String,
     productionCompanies: (json['production_companies'] as List)
-        .map((e) => ProductionCompany.fromJson(e as Map<String, dynamic>))
-        .toList(),
+        ?.map((e) => e == null
+            ? null
+            : ProductionCompanyModel.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     productionCountries: (json['production_countries'] as List)
-        .map((e) => ProductionCountry.fromJson(e as Map<String, dynamic>))
-        .toList(),
+        ?.map((e) => e == null
+            ? null
+            : ProductionCountryModel.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     releaseDate: json['release_date'] as String,
     revenue: json['revenue'] as int,
     runtime: json['runtime'] as int,
     spokenLanguages: (json['spoken_languages'] as List)
-        .map((e) => SpokenLanguage.fromJson(e as Map<String, dynamic>))
-        .toList(),
+        ?.map((e) => e == null
+            ? null
+            : SpokenLanguageModel.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     status: json['status'] as String,
     tagLine: json['tagline'] as String,
     video: json['video'] as bool,
-    voteAverage: (json['vote_average'] as num).toDouble(),
+    voteAverage: (json['vote_average'] as num)?.toDouble(),
     voteCount: json['vote_count'] as int,
   );
 }
 
-Map<String, dynamic> _$MovieDetailsToJson(MovieDetails instance) =>
+Map<String, dynamic> _$MovieDetailsModelToJson(MovieDetailsModel instance) =>
     <String, dynamic>{
       'adult': instance.adult,
       'backdrop_path': instance.backdropPath,

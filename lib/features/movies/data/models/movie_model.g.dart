@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'movie.dart';
+part of 'movie_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Movie _$MovieFromJson(Map<String, dynamic> json) {
-  return Movie(
+MovieModel _$MovieModelFromJson(Map<String, dynamic> json) {
+  return MovieModel(
     adult: json['adult'] as bool,
     backdropPath: json['backdrop_path'] as String,
     posterPath: json['poster_path'] as String,
@@ -16,16 +16,17 @@ Movie _$MovieFromJson(Map<String, dynamic> json) {
     title: json['title'] as String,
     originalTitle: json['original_title'] as String,
     overview: json['overview'] as String,
-    popularity: (json['popularity'] as num).toDouble(),
+    popularity: (json['popularity'] as num)?.toDouble(),
     releaseDate: json['release_date'] as String,
     video: json['video'] as bool,
-    voteAverage: (json['vote_average'] as num).toDouble(),
+    voteAverage: (json['vote_average'] as num)?.toDouble(),
     voteCount: json['vote_count'] as int,
-    genreIds: (json['genre_ids'] as List).map((e) => e as int).toList(),
+    genreIds: (json['genre_ids'] as List)?.map((e) => e as int)?.toList(),
   );
 }
 
-Map<String, dynamic> _$MovieToJson(Movie instance) => <String, dynamic>{
+Map<String, dynamic> _$MovieModelToJson(MovieModel instance) =>
+    <String, dynamic>{
       'adult': instance.adult,
       'backdrop_path': instance.backdropPath,
       'poster_path': instance.posterPath,

@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'belongs_to_collection.dart';
+part of 'belongs_to_collection_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-BelongsToCollection _$BelongsToCollectionFromJson(Map<String, dynamic> json) {
-  return BelongsToCollection(
+BelongsToCollectionModel _$BelongsToCollectionModelFromJson(
+    Map<String, dynamic> json) {
+  return BelongsToCollectionModel(
     id: json['id'] as int,
     name: json['name'] as String,
     posterPath: json['poster_path'] as String,
@@ -15,8 +16,8 @@ BelongsToCollection _$BelongsToCollectionFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$BelongsToCollectionToJson(
-        BelongsToCollection instance) =>
+Map<String, dynamic> _$BelongsToCollectionModelToJson(
+        BelongsToCollectionModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

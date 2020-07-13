@@ -24,4 +24,6 @@ abstract class MovieRepository {
 
   Future<Either<Failure, Response>> deleteMovieRate(int movieId,
       [String sessionId]);
+
+//TODO("Add use case getDetails")
 }

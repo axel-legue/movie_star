@@ -1,0 +1,54 @@
+{
+  "adult": false,
+  "backdrop_path": "test",
+  "belongs_to_collection": {
+    "id": 0,
+    "name": "test",
+    "poster_path": "test",
+    "backdrop_path": "test"
+  },
+  "budget": 0,
+  "genres": [
+    {
+      "id": 0,
+      "name": "test"
+    }
+  ],
+  "homepage": "test",
+  "id": 0,
+  "imdb_id": "test",
+  "original_language": "test",
+  "original_title": "test",
+  "overview": "test",
+  "popularity": 0.0,
+  "poster_path": "test",
+  "production_companies": [
+    {
+      "id": 0,
+      "logo_path": "test",
+      "name": "test",
+      "origin_country": "test"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "test",
+      "name": "test"
+    }
+  ],
+  "release_date": "test",
+  "revenue": 0,
+  "runtime": 0,
+  "spoken_languages": [
+    {
+      "iso_639_1": "test",
+      "name": "test"
+    }
+  ],
+  "status": "test",
+  "tagline": "test",
+  "title": "test",
+  "video": true,
+  "vote_average": 0.0,
+  "vote_count": 0
+}

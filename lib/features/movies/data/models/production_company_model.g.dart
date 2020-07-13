@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'production_company.dart';
+part of 'production_company_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProductionCompany _$ProductionCompanyFromJson(Map<String, dynamic> json) {
-  return ProductionCompany(
+ProductionCompanyModel _$ProductionCompanyModelFromJson(
+    Map<String, dynamic> json) {
+  return ProductionCompanyModel(
     id: json['id'] as int,
     logoPath: json['logo_path'] as String,
     name: json['name'] as String,
@@ -15,7 +16,8 @@ ProductionCompany _$ProductionCompanyFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$ProductionCompanyToJson(ProductionCompany instance) =>
+Map<String, dynamic> _$ProductionCompanyModelToJson(
+        ProductionCompanyModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'logo_path': instance.logoPath,

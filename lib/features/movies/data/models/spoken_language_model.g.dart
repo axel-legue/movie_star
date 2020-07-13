@@ -1,20 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'production_country.dart';
+part of 'spoken_language_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProductionCountry _$ProductionCountryFromJson(Map<String, dynamic> json) {
-  return ProductionCountry(
-    iso3166: json['iso_3166_1'] as String,
+SpokenLanguageModel _$SpokenLanguageModelFromJson(Map<String, dynamic> json) {
+  return SpokenLanguageModel(
+    iso639: json['iso_639_1'] as String,
     name: json['name'] as String,
   );
 }
 
-Map<String, dynamic> _$ProductionCountryToJson(ProductionCountry instance) =>
+Map<String, dynamic> _$SpokenLanguageModelToJson(
+        SpokenLanguageModel instance) =>
     <String, dynamic>{
-      'iso_3166_1': instance.iso3166,
+      'iso_639_1': instance.iso639,
       'name': instance.name,
     };

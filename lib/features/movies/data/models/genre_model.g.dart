@@ -1,20 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'spoken_language.dart';
+part of 'genre_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-SpokenLanguage _$SpokenLanguageFromJson(Map<String, dynamic> json) {
-  return SpokenLanguage(
-    iso639: json['iso_639_1'] as String,
+GenreModel _$GenreModelFromJson(Map<String, dynamic> json) {
+  return GenreModel(
+    id: json['id'] as int,
     name: json['name'] as String,
   );
 }
 
-Map<String, dynamic> _$SpokenLanguageToJson(SpokenLanguage instance) =>
+Map<String, dynamic> _$GenreModelToJson(GenreModel instance) =>
     <String, dynamic>{
-      'iso_639_1': instance.iso639,
+      'id': instance.id,
       'name': instance.name,
     };
