@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:movie_star/core/entities/response.dart';
 import 'package:movie_star/core/error/failures.dart';
+import 'package:movie_star/features/movies/domain/entities/movie_details.dart';
 import 'package:movie_star/features/movies/domain/entities/movies.dart';
 
 abstract class MovieRepository {
@@ -19,11 +20,12 @@ abstract class MovieRepository {
   Future<Either<Failure, Movies>> getNowPlayingMovies(
       [int page, String region, String language]);
 
+  Future<Either<Failure, MovieDetails>> getDetailsMovie(int movieId,
+      [String sessionId]);
+
   Future<Either<Failure, Response>> postRateMovie(int movieId,
       [String sessionId]);
 
   Future<Either<Failure, Response>> deleteMovieRate(int movieId,
       [String sessionId]);
-
-//TODO("Add use case getDetails")
 }
