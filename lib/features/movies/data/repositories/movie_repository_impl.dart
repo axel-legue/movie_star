@@ -3,7 +3,7 @@ import 'package:meta/meta.dart';
 import 'package:movie_star/core/entities/response.dart';
 import 'package:movie_star/core/error/exceptions.dart';
 import 'package:movie_star/core/error/failures.dart';
-import 'package:movie_star/core/platform/network_info.dart';
+import 'package:movie_star/core/network/network_info.dart';
 import 'package:movie_star/features/movies/data/datasources/movie_local_data_source.dart';
 import 'package:movie_star/features/movies/data/datasources/movie_remote_data_source.dart';
 import 'package:movie_star/features/movies/domain/entities/movie_details.dart';
