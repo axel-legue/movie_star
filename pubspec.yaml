@@ -18,8 +18,8 @@ dependencies:
   equatable: ^1.2.2
   # Functional programming thingies
   dartz: ^0.9.1
-  # Remote API
-  connectivity: ^0.4.9
+  # Check internet connection
+  data_connection_checker: ^0.3.4
   http: ^0.12.1
   # Local cache
   shared_preferences: ^0.5.8
