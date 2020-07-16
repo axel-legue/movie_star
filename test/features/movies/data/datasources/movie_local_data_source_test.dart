@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:matcher/matcher.dart';
 import 'package:mockito/mockito.dart';
 import 'package:movie_star/core/error/exceptions.dart';
-import 'package:movie_star/features/movies/data/datasources/movie_local_data_source_impl.dart';
+import 'package:movie_star/features/movies/data/datasources/shared_preference_movie_data_source.dart';
 import 'package:movie_star/features/movies/data/models/belongs_to_collection_model.dart';
 import 'package:movie_star/features/movies/data/models/genre_model.dart';
 import 'package:movie_star/features/movies/data/models/movie_details_model.dart';
@@ -66,7 +66,40 @@ void main() {
       page: 0,
       totalResults: 0,
       totalPages: 0,
-      movies: List<MovieModel>(),
+      movies: [
+        MovieModel(
+          popularity: 0.0,
+          voteCount: 0,
+          video: true,
+          posterPath: "test",
+          id: 0,
+          adult: false,
+          backdropPath: "test",
+          originalLanguage: "test",
+          originalTitle: "test",
+          genreIds: [0],
+          title: "test",
+          voteAverage: 0.0,
+          overview: "test",
+          releaseDate: "test",
+        ),
+        MovieModel(
+          popularity: 0.0,
+          voteCount: 0,
+          video: true,
+          posterPath: "test",
+          id: 1,
+          adult: false,
+          backdropPath: "test",
+          originalLanguage: "test",
+          originalTitle: "test",
+          genreIds: [0],
+          title: "test",
+          voteAverage: 0.0,
+          overview: "test",
+          releaseDate: "test",
+        ),
+      ],
     );
 
     test(
@@ -84,11 +117,11 @@ void main() {
 
   group('getLastTopRatedMovies', () {
     final tMovieListModel =
-    MovieListModel.fromJson(json.decode(fixture('movies.json')));
+        MovieListModel.fromJson(json.decode(fixture('movies.json')));
 
     test(
       'should return MovieListModel from SharedPreferences when there is one in the cache',
-          () async {
+      () async {
         // arrange
         when(mockSharedPreferences.getString(any))
             .thenReturn(fixture('movies.json'));
@@ -102,7 +135,7 @@ void main() {
 
     test(
       'should throw CachedException when there is no cached value',
-          () async {
+      () async {
         // arrange
         when(mockSharedPreferences.getString(any)).thenReturn(null);
         // act
@@ -124,7 +157,7 @@ void main() {
 
     test(
       'should call SharedPreferences to cache the data',
-          () async {
+      () async {
         // act
         dataSource.cacheLastTopRatedMovies(tMovieListModel);
         // assert
@@ -137,11 +170,11 @@ void main() {
 
   group('getLastUpcomingMovies', () {
     final tMovieListModel =
-    MovieListModel.fromJson(json.decode(fixture('movies.json')));
+        MovieListModel.fromJson(json.decode(fixture('movies.json')));
 
     test(
       'should return MovieListModel from SharedPreferences when there is one in the cache',
-          () async {
+      () async {
         // arrange
         when(mockSharedPreferences.getString(any))
             .thenReturn(fixture('movies.json'));
@@ -155,7 +188,7 @@ void main() {
 
     test(
       'should throw CachedException when there is no cached value',
-          () async {
+      () async {
         // arrange
         when(mockSharedPreferences.getString(any)).thenReturn(null);
         // act
@@ -177,7 +210,7 @@ void main() {
 
     test(
       'should call SharedPreferences to cache the data',
-          () async {
+      () async {
         // act
         dataSource.cacheLastUpComingMovies(tMovieListModel);
         // assert
@@ -190,11 +223,11 @@ void main() {
 
   group('getLastNowPlayingMovies', () {
     final tMovieListModel =
-    MovieListModel.fromJson(json.decode(fixture('movies.json')));
+        MovieListModel.fromJson(json.decode(fixture('movies.json')));
 
     test(
       'should return MovieListModel from SharedPreferences when there is one in the cache',
-          () async {
+      () async {
         // arrange
         when(mockSharedPreferences.getString(any))
             .thenReturn(fixture('movies.json'));
@@ -208,7 +241,7 @@ void main() {
 
     test(
       'should throw CachedException when there is no cached value',
-          () async {
+      () async {
         // arrange
         when(mockSharedPreferences.getString(any)).thenReturn(null);
         // act
@@ -230,7 +263,7 @@ void main() {
 
     test(
       'should call SharedPreferences to cache the data',
-          () async {
+      () async {
         // act
         dataSource.cacheLastNowPlayingMovies(tMovieListModel);
         // assert
@@ -243,11 +276,11 @@ void main() {
 
   group('getLastLatestMovies', () {
     final tMovieListModel =
-    MovieListModel.fromJson(json.decode(fixture('movies.json')));
+        MovieListModel.fromJson(json.decode(fixture('movies.json')));
 
     test(
       'should return MovieListModel from SharedPreferences when there is one in the cache',
-          () async {
+      () async {
         // arrange
         when(mockSharedPreferences.getString(any))
             .thenReturn(fixture('movies.json'));
@@ -261,7 +294,7 @@ void main() {
 
     test(
       'should throw CachedException when there is no cached value',
-          () async {
+      () async {
         // arrange
         when(mockSharedPreferences.getString(any)).thenReturn(null);
         // act
@@ -283,7 +316,7 @@ void main() {
 
     test(
       'should call SharedPreferences to cache the data',
-          () async {
+      () async {
         // act
         dataSource.cacheLastLatestMovies(tMovieListModel);
         // assert
@@ -296,11 +329,11 @@ void main() {
   //TODO : IMPLEMENT
   group('getLastMovieDetails', () {
     final tMovieDetailsModel =
-    MovieDetailsModel.fromJson(json.decode(fixture('movie-details.json')));
+        MovieDetailsModel.fromJson(json.decode(fixture('movie-details.json')));
 
     test(
       'should return MovieDetails from SharedPreferences when there is one in the cache',
-          () async {
+      () async {
         // arrange
         when(mockSharedPreferences.getString(any))
             .thenReturn(fixture('movie-details.json'));
@@ -314,7 +347,7 @@ void main() {
 
     test(
       'should throw CachedException when there is no cached value',
-          () async {
+      () async {
         // arrange
         when(mockSharedPreferences.getString(any)).thenReturn(null);
         // act
@@ -362,7 +395,7 @@ void main() {
 
     test(
       'should call SharedPreferences to cache the data',
-          () async {
+      () async {
         // act
         dataSource.cacheLastDetailsMovie(tMovieDetailsModel);
         // assert
@@ -372,6 +405,4 @@ void main() {
       },
     );
   });
-
-
 }
