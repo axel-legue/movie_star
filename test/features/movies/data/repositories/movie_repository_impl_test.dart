@@ -444,7 +444,7 @@ void main() {
         'should return remote data when the call to remote data source is successful',
         () async {
           // arrange
-          when(mockRemoteDataSource.getUpComingMovies())
+          when(mockRemoteDataSource.getUpcomingMovies())
               .thenAnswer((_) async => tMovieListModel);
           // act
           final result = await repositoryImpl.getUpComingMovies();
@@ -457,7 +457,7 @@ void main() {
         'should cache the data locally when the call to remote data source is successful',
         () async {
           // arrange
-          when(mockRemoteDataSource.getUpComingMovies())
+          when(mockRemoteDataSource.getUpcomingMovies())
               .thenAnswer((_) async => tMovieListModel);
           // act
           await repositoryImpl.getUpComingMovies();
@@ -470,12 +470,12 @@ void main() {
         'should return server failure when the call to remote data source is unsuccessful',
         () async {
           // arrange
-          when(mockRemoteDataSource.getUpComingMovies())
+          when(mockRemoteDataSource.getUpcomingMovies())
               .thenThrow(ServerException());
           // act
           final result = await repositoryImpl.getUpComingMovies();
           // assert
-          verify(mockRemoteDataSource.getUpComingMovies());
+          verify(mockRemoteDataSource.getUpcomingMovies());
           verifyZeroInteractions(mockLocalDataSource);
           expect(result, equals(Left(tServerFailure)));
         },

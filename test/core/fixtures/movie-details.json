@@ -1,64 +1,54 @@
 {
-  "page": 1,
-  "total_results": 10000,
-  "total_pages": 500,
-  "results": [{
-    "popularity": 423.58,
-    "vote_count": 184,
-    "video": false,
-    "poster_path": "AsdB9A2XGalCZVjlyG9tRf03IfW.jpg",
-    "id": 516486,
-    "adult": false,
-    "backdrop_path": "xXBnM6uSTk6qqCf0SRZKXcga9Ba.jpg",
-    "original_language": "en",
-    "original_title": "Greyhound",
-    "genre_ids": [
-      28,
-      18,
-      10752
-    ],
-    "title": "Greyhound",
-    "vote_average": 7.2,
-    "overview": "A first-time captain leads a convoy of allied ships carrying thousands of soldiers across the treacherous waters of the “Black Pit” to the front lines of WW2. With no air cover protection for 5 days, the captain and his convoy must battle the surrounding enemy Nazi U-boats in order to give the allies a chance to win the war.",
-    "release_date": "2020-07-10"
+  "adult": false,
+  "backdrop_path": "test",
+  "belongs_to_collection": {
+    "id": 0,
+    "name": "test",
+    "poster_path": "test",
+    "backdrop_path": "test"
   },
+  "budget": 0,
+  "genres": [
     {
-      "popularity": 387.518,
-      "vote_count": 758,
-      "video": false,
-      "poster_path": "cjr4NWURcVN3gW5FlHeabgBHLrY.jpg",
-      "id": 547016,
-      "adult": false,
-      "backdrop_path": "m0ObOaJBerZ3Unc74l471ar8Iiy.jpg",
-      "original_language": "en",
-      "original_title": "The Old Guard",
-      "genre_ids": [
-        28,
-        14
-      ],
-      "title": "The Old Guard",
-      "vote_average": 7.3,
-      "overview": "Four undying warriors who've secretly protected humanity for centuries become targeted for their mysterious powers just as they discover a new immortal.",
-      "release_date": "2020-07-10"
-    },
-    {
-      "popularity": 149.547,
-      "vote_count": 3929,
-      "video": false,
-      "poster_path": "xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg",
-      "id": 419704,
-      "adult": false,
-      "backdrop_path": "AeDS2MKGFy6QcjgWbJBde0Ga6Hd.jpg",
-      "original_language": "en",
-      "original_title": "Ad Astra",
-      "genre_ids": [
-        18,
-        878
-      ],
-      "title": "Ad Astra",
-      "vote_average": 6.1,
-      "overview": "The near future, a time when both hope and hardships drive humanity to look to the stars and beyond. While a mysterious phenomenon menaces to destroy life on planet Earth, astronaut Roy McBride undertakes a mission across the immensity of space and its many perils to uncover the truth about a lost expedition that decades before boldly faced emptiness and silence in search of the unknown.",
-      "release_date": "2019-09-17"
+      "id": 1,
+      "name": "test"
     }
-  ]
+  ],
+  "homepage": "test",
+  "id": 0,
+  "imdb_id": "test",
+  "original_language": "test",
+  "original_title": "test",
+  "overview": "test",
+  "popularity": 0.0,
+  "poster_path": "test",
+  "production_companies": [
+    {
+      "id": 0,
+      "logo_path": "test",
+      "name": "test",
+      "origin_country": "test"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "test",
+      "name": "test"
+    }
+  ],
+  "release_date": "test",
+  "revenue": 0,
+  "runtime": 0,
+  "spoken_languages": [
+    {
+      "iso_639_1": "test",
+      "name": "test"
+    }
+  ],
+  "status": "test",
+  "tagline": "test",
+  "title": "test",
+  "video": true,
+  "vote_average": 0.0,
+  "vote_count": 0
 }

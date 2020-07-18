@@ -145,7 +145,7 @@ class MovieRepositoryImpl implements MovieRepository {
       [int page, String region, String language]) async {
     if (await networkInfo.isConnected) {
       try {
-        final upComingMovies = await movieRemoteDataSource.getUpComingMovies();
+        final upComingMovies = await movieRemoteDataSource.getUpcomingMovies();
         movieLocalDataSource.cacheLastUpComingMovies(upComingMovies);
         return Right(upComingMovies);
       } on ServerException {

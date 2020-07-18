@@ -17,7 +17,7 @@ abstract class MovieRemoteDataSource {
   /// Calls the https://api.themoviedb.org/3/movie/upcoming?api_key={api_key}&language={language}&page={pageNumber}
   ///
   /// Throws a [ServerException] for all error codes.
-  Future<MovieListModel> getUpComingMovies(
+  Future<MovieListModel> getUpcomingMovies(
       [int page, String region, String language]);
 
   /// Calls the https://api.themoviedb.org/3/movie/latest?api_key={api_key}&language={language}&page={pageNumber}
