@@ -4,7 +4,8 @@ import 'package:mockito/mockito.dart';
 import 'package:movie_star/core/usecases/use_case.dart';
 import 'package:movie_star/features/movies/domain/entities/movies.dart';
 import 'package:movie_star/features/movies/domain/usecases/get_popular_movies.dart';
-import '../repository/mock_movie_repository.dart';
+
+import 'delete_rate_movie_test.dart';
 
 void main() {
   GetPopularMovies getPopularMovies;

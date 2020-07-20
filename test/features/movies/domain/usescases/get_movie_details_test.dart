@@ -10,7 +10,7 @@ import 'package:movie_star/features/movies/domain/entities/production_country.da
 import 'package:movie_star/features/movies/domain/entities/spoken_language.dart';
 import 'package:movie_star/features/movies/domain/usecases/get_movies_details.dart';
 
-import '../repository/mock_movie_repository.dart';
+import 'delete_rate_movie_test.dart';
 
 void main() {
   GetMovieDetails getMovieDetails;

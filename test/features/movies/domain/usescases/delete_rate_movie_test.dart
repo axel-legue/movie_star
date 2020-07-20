@@ -3,9 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:movie_star/core/entities/response.dart';
 import 'package:movie_star/core/usecases/use_case.dart';
+import 'package:movie_star/features/movies/domain/repositories/movie_repository.dart';
 import 'package:movie_star/features/movies/domain/usecases/delete_rate_movie.dart';
 
-import '../repository/mock_movie_repository.dart';
+class MockMovieRepository extends Mock implements MovieRepository {}
 
 void main() {
   DeleteRateMovie deleteRateMovie;

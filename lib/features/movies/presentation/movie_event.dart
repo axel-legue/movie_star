@@ -4,45 +4,45 @@ abstract class MovieEvent extends Equatable {
   const MovieEvent();
 }
 
-class GetPopularMovies extends MovieEvent {
-  GetPopularMovies();
+class GetPopularMoviesEvent extends MovieEvent {
+  GetPopularMoviesEvent();
 
   @override
   List<Object> get props => [];
 }
 
-class GetTopRatedMovies extends MovieEvent {
-  GetTopRatedMovies();
+class GetTopRatedMoviesEvent extends MovieEvent {
+  GetTopRatedMoviesEvent();
 
   @override
   List<Object> get props => [];
 }
 
-class GetLatestMovies extends MovieEvent {
-  GetLatestMovies();
+class GetLatestMoviesEvent extends MovieEvent {
+  GetLatestMoviesEvent();
 
   @override
   List<Object> get props => [];
 }
 
-class GetNowPlayingMovies extends MovieEvent {
-  GetNowPlayingMovies();
+class GetNowPlayingMoviesEvent extends MovieEvent {
+  GetNowPlayingMoviesEvent();
 
   @override
   List<Object> get props => [];
 }
 
-class GetUpcomingMovies extends MovieEvent {
-  GetUpcomingMovies();
+class GetUpcomingMoviesEvent extends MovieEvent {
+  GetUpcomingMoviesEvent();
 
   @override
   List<Object> get props => [];
 }
 
-class GetMovieDetails extends MovieEvent {
+class GetMovieDetailsEvent extends MovieEvent {
   final int idMovie;
 
-  GetMovieDetails(this.idMovie);
+  GetMovieDetailsEvent(this.idMovie);
 
   @override
   List<Object> get props => [this.idMovie];

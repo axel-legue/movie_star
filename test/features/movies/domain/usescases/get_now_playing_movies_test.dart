@@ -5,7 +5,7 @@ import 'package:movie_star/core/usecases/use_case.dart';
 import 'package:movie_star/features/movies/domain/entities/movies.dart';
 import 'package:movie_star/features/movies/domain/usecases/get_now_playing_movies.dart';
 
-import '../repository/mock_movie_repository.dart';
+import 'delete_rate_movie_test.dart';
 
 void main() {
   GetNowPlayingMovies getNowPlayingMovies;

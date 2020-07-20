@@ -5,7 +5,7 @@ import 'package:movie_star/core/entities/response.dart';
 import 'package:movie_star/core/usecases/use_case.dart';
 import 'package:movie_star/features/movies/domain/usecases/post_rate_movie.dart';
 
-import '../repository/mock_movie_repository.dart';
+import 'delete_rate_movie_test.dart';
 
 void main() {
   PostRateMovie rateMovie;
